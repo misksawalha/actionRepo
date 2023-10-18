@@ -3,13 +3,15 @@ on:
   push:
     branches:
       - main
-
+pull_request:
+     -main
+  workflow_dispatch:
 jobs:
-  check-emojis:
+  console:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-
+      - name: print name
+       - uses: actions/checkout@v2
+       run : echo "misk sawallha"
       - name: Check Emoji Shortcodes
-        uses: misksawalha/emoji-checker-action@v1
+      - shell  : bash

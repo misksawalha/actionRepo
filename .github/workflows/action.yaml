@@ -10,8 +10,7 @@ jobs:
   console:
     runs-on: ubuntu-latest
     steps:
+     - uses: actions/checkout@v2
       - name: print name
-       - uses: actions/checkout@v2
-       run : echo "misk sawallha"
-      - name: Check Emoji Shortcodes
+      - run : echo "misk sawallha"
       - shell  : bash

@@ -1,0 +1,15 @@
+name: Emoji Checker
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-emojis:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Check Emoji Shortcodes
+        uses: misksawalha/emoji-checker-action@v1

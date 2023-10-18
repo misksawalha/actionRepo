@@ -1,15 +1,19 @@
-name: Emoji Checker
+name: print my name
+
 on:
   push:
     branches:
       - main
-pull_request:
-     -main
+  pull_request:
+    branches:
+      - main
+
 jobs:
   console:
     runs-on: ubuntu-latest
     steps:
-     - uses: actions/checkout@v2
-      - name: print name
-      run : echo "misk sawallha"
-       shell  : bash
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Print Name
+        run: echo "misk sawallha"
